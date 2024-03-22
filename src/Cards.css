@@ -1,0 +1,117 @@
+.cardFront{
+  background-image: url('bg-card-front.png');
+  width: 400px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal alignment, if needed */
+  justify-content: flex-end; 
+}
+
+.cardNumber{
+  display: flex;
+  justify-content: center;
+  width: 360px;
+  margin-left: 10px;
+  color: rgb(207, 203, 203);
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.lowerLine{
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(207, 203, 203);
+  font-size: 13px;
+  margin: 10px;
+}
+.cardNumber::after {
+  content: '\00a0\00a0\00a0'; 
+}
+
+.cardBack{
+  width: 400px;
+  height: 200px;
+  margin-left: 80px;
+  background-color: rgb(168, 163, 163);
+  border-radius: 6px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center; /* Horizontal alignment, if needed */
+  justify-content: space-between; 
+}
+#black{
+  width: 400px;
+  height: 35px;
+  background-color: rgb(37, 36, 36);
+  margin-top: 18px;
+}
+.backCardContainer{
+  width: 320px;
+  height: 30px;
+  background-color: grey;
+
+  padding-right: 15px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center; /* Horizontal alignment, if needed */
+  justify-content: end; 
+  color: rgb(207, 203, 203);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.rectangles{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7px;
+
+}
+#r1{
+  height: 2px;
+  width: 99px;
+  background-color:grey;
+  margin-right: 10px;
+}
+#r2{
+  height: 2px;
+  width: 40px;
+  background-color:grey;
+  margin-right: 10px;
+}
+#r3{
+  height: 2px;
+  width: 20px;
+  background-color:grey;
+  margin-right: 10px;
+}
+#r11{
+  height: 2px;
+  width: 30px;
+  background-color:grey;
+  margin-right: 10px;
+}
+#r12{
+  height: 2px;
+  width: 60px;
+  background-color:grey;
+  margin-right: 10px;
+}
+
+#r13{
+  height: 2px;
+  width: 20px;
+  background-color:grey;
+  margin-right: 10px;
+}
+#r14{
+  height: 2px;
+  width: 20px;
+  background-color:grey;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
