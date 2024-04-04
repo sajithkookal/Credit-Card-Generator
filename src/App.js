@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import './App.css';
 import Cards from './Cards';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [holderName, setHolderName] = useState('')
@@ -75,14 +77,22 @@ function App() {
   }
 
   function handleClick() {
-    console.log(holderName, cardNumber)
-    setError(true)
+
+    setError(true);
+    console.log("truesss")
+    console.log(holderName.length)
+    console.log(cardNumber.length)
+    console.log(expMonth.length)
+    console.log(expYear.length)
+    console.log(cvc.length)
+    if(holderName.length !== 0 && !cardNumber.length < 16 &&
+       expMonth.length === 2 && expYear.length === 2 && cvc.length === 3){
+        console.log("true")
+        toast("Details added successfully");
+    }
   }
-
   return (
-
     <div id="mainDiv">
-
 
       <div className="AppLeft">
         <div id='cardDiv'>
@@ -136,7 +146,7 @@ function App() {
 
           <label>CARD NUMBER</label>
           <input type="number" value={cardNumberValue} placeholder='e.g. 1234 5678 9123 0000' onChange={onChangeCardNumber}></input>
-          {error && cardNumber.length == 0 ? <label className='errorLabel'>Card number required</label> : ""}
+          {error && cardNumber.length < 16 ? <label className='errorLabel'>Card number required(16 digit)</label> : ""}
           <div className='horizDiv'>
             <div id='exDate' >
 
@@ -167,6 +177,7 @@ function App() {
         </div>
 
       </div>
+      <ToastContainer />
     </div>
 
   );
